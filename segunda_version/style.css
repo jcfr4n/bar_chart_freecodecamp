@@ -1,0 +1,19 @@
+body{
+    background-color: antiquewhite;
+}
+h1, h2, h3, p {
+    text-align: center;
+}
+axis{
+    font: 1rem monospace;
+}
+graph-svg-component{
+    background-color: white;
+    display: block;
+    margin: auto;
+}
+
+.axis path, .axis line{
+    fill: none;
+    stroke: #3A3A3A;
+}
