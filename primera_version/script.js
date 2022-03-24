@@ -69,6 +69,13 @@ let generateAxis = () => {
 
 let generateBars = () => {
 
+    let tooltip = d3.select('body')
+                    .append('div')
+                    .attr('id','tooltip')
+                    .style('visibility','hidden')
+                    .style('height','auto')
+                    .style('width','auto');
+
     svg.selectAll('rect')
         .data(values)
         .enter()
@@ -89,6 +96,14 @@ let generateBars = () => {
             })
             .attr('y',(item) => {
                 return (height - padding) - yScale(item[1]);
+            })
+            .on('mouseover',(e,item) => {
+                tooltip.style('visibility','visible')
+                        .text(item[0] + ' - ' + item[1])
+                        .attr('data-date',item[0]);
+            })
+            .on('mouseout',(e,item) => {
+                tooltip.style('visibility','hidden');
             });
         
 
