@@ -45,6 +45,22 @@ function drawBar(dataset) {
 
                     });
 
-    let svg = d3.select('#barGraph').append(svg).attribute
+    let svg = d3.select('#barGraph')
+                .append(svg)
+                .attr('width', width + margin.right + margin.left)
+                .attr('heiht', height + margin.bottom + margin.top)
+                .attr('class', 'graph-svg-component')
+                .append('g')
+                .attr("transform", "translate(" + margin.left + ", " +margin.top  + ")");
+
+    svg.selectAll('bar')
+        .data(dataset)
+        .enter()
+        .append('rect')
+        .style('fill', 'orangered')
+        .attr({
+            x: function(data, index) {return index * (width/dataset.length)},
+            width: width/dataset.length,
+        });
     
 }
