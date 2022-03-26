@@ -2,6 +2,8 @@
 /* eslint-disable max-len */
 
 // eslint-disable-next-line no-unused-vars
+
+//jshint esversion:6
 const projectName = 'bar-chart';
 
 // coded by @Christian-Paul
