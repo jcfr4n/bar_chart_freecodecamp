@@ -2,6 +2,8 @@
 
 /**
  * coded by @juan-carlos-francisco
+ * github: https://github.com/jcfr4n/bar_chart_freecodecamp
+ * 
  */
 
 const urlData =
